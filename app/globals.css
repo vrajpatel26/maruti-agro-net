@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 :root {
@@ -19,8 +20,71 @@
   }
 }
 
+html {
+  overflow-x: clip;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+/* Hero entrance animations */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  opacity: 0;
+  animation: heroReveal 0.9s ease-out forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.hero-delay-3 {
+  animation-delay: 0.45s;
+}
+
+.hero-delay-4 {
+  animation-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+
+  .animate-bounce {
+    animation: none;
+  }
 }

@@ -84,11 +84,10 @@ export default function CompanyIntro() {
 
           {/* Factory Image */}
           <div
-            className={`relative transition-all duration-1000 ${
-              isVisible
+            className={`relative isolate transition-all duration-1000 ${isVisible
                 ? "translate-x-0 opacity-100"
                 : "-translate-x-10 opacity-0"
-            }`}
+              }`}
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gray-100 shadow-xl">
               <Image
@@ -115,11 +114,10 @@ export default function CompanyIntro() {
 
           {/* Company Content */}
           <div
-            className={`transition-all delay-200 duration-1000 ${
-              isVisible
+            className={`transition-all delay-200 duration-1000 ${isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
-            }`}
+              }`}
           >
             <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-green-700">
               <span className="h-[2px] w-8 bg-green-600" />
@@ -134,18 +132,10 @@ export default function CompanyIntro() {
             </h2>
 
             <p className="mt-7 text-base leading-8 text-gray-600">
-              Founded in 2022, Maruti Agro Net Industries is engaged
-              in manufacturing Tape x Tape shade nets for agricultural
-              and other applications. With a growing manufacturing
-              operation, we focus on providing shade net solutions
-              suited to different customer requirements.
-            </p>
-
-            <p className="mt-4 text-base leading-8 text-gray-600">
-              Our company has recorded total sales exceeding ₹25 crore,
-              with a workforce of over 40 people and a network of more
-              than 50 traders. We offer shade nets in green, black,
-              beige, white and custom-requested colours.
+              Founded in 2022, Maruti Agro Net Industries manufactures
+              Tape x Tape shade nets for agricultural and other applications.
+              We focus on delivering shade net solutions that meet the
+              varied requirements of our customers.
             </p>
 
             {/* Features */}
@@ -197,11 +187,10 @@ export default function CompanyIntro() {
 
         {/* Company Statistics */}
         <div
-          className={`mt-24 grid grid-cols-2 gap-4 transition-all delay-300 duration-1000 sm:grid-cols-4 sm:gap-6 ${
-            isVisible
+          className={`mt-24 grid grid-cols-2 gap-4 transition-all delay-300 duration-1000 sm:grid-cols-4 sm:gap-6 ${isVisible
               ? "translate-y-0 opacity-100"
               : "translate-y-10 opacity-0"
-          }`}
+            }`}
         >
           {companyStats.map((stat) => {
             const Icon = stat.icon;
